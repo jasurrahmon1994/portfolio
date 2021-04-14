@@ -12,12 +12,7 @@
     <link rel="stylesheet" href="/assets/fonts/fawesome.css">
     <link rel="stylesheet" href="/assets/styles/navfooter.css">
     
-    <?php
-    if ($page == 'index') {
-        echo '<link rel="stylesheet" href="/assets/styles/index.css">';
-    }
-    ?>
-    <link rel="stylesheet" href="/assets/styles/gold.css">
+   
 
     <title>Jasur Rahmonov || Personal Portfolio</title>
 </head>
