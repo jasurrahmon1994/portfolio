@@ -1,0 +1,889 @@
+@import url(../fonts/Roboto/Roboto.css);
+@import url(../fonts/Raleway/Raleway.css);
+html *,
+html ul,
+html p {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  scroll-behavior: smooth;
+  outline: none;
+  font-family: "Raleway";
+  outline: none;
+  font-size: 16px;
+  line-height: 150%;
+  color: #bbbbbb;
+}
+
+html a {
+  color: inherit;
+  text-decoration: none;
+}
+
+html section {
+  overflow: hidden;
+}
+
+html input::-webkit-outer-spin-button,
+html input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+html input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+body {
+  background-color: #eff0f4;
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+body.stop-scrolling {
+  overflow-y: hidden;
+}
+
+body.dark {
+  background-color: #2b2c2f;
+}
+
+body.dark .style-switcher h4 {
+  color: white;
+}
+
+body.dark .nav-menu .close-nav-menu {
+  color: #ffffff;
+}
+
+body.dark .nav-menu .nav-menu-inner ul li a {
+  color: #ffffff;
+}
+
+body.dark .nav-menu .nav-menu-inner ul li a.active {
+  color: #fb839e;
+}
+
+body.dark .home-section .row .home-text h1 {
+  color: #bbbbbb;
+}
+
+body.dark .about-section .row .about-info p {
+  color: #bbbbbb;
+}
+
+body.dark .about-section .row .tabs .tabs-content .tab > h2 {
+  color: #bbbbbb;
+}
+
+body.dark .service-section .row .service-item .service-item-inner h3, body.dark .service-section .row .service-item .service-item-inner p {
+  color: #bbbbbb;
+}
+
+body.dark .portfolio-section .row .portfolio-filter .filter-item {
+  color: #ffffff;
+}
+
+body.dark .portfolio-popup {
+  background-color: #2b2c2f;
+}
+
+body.dark .portfolio-popup .pp-main .pp-main-inner .pp-close {
+  color: white;
+}
+
+body.dark .portfolio-popup .pp-main .pp-main-inner .pp-prev i, body.dark .portfolio-popup .pp-main .pp-main-inner .pp-next i {
+  color: white;
+}
+
+body.dark .portfolio-popup .pp-details .pp-details-inner .pp-title h2 {
+  color: white;
+}
+
+body.dark .portfolio-popup .pp-details .pp-details-inner .pp-project-details .row .description p, body.dark .portfolio-popup .pp-details .pp-details-inner .pp-project-details .row h3, body.dark .portfolio-popup .pp-details .pp-details-inner .pp-project-details .row .info ul li {
+  color: white;
+}
+
+body.dark .contact-section .container .row .contact-item a h3 {
+  color: #ffffff;
+}
+
+body.dark .contact-section .container .contact-form .main .inputs input {
+  background-color: #2b2c2f;
+  color: white;
+}
+
+body.dark .contact-section .container .contact-form .main .inputs input::-webkit-input-placeholder {
+  color: white;
+}
+
+body.dark .contact-section .container .contact-form .main .inputs input:-ms-input-placeholder {
+  color: white;
+}
+
+body.dark .contact-section .container .contact-form .main .inputs input::-ms-input-placeholder {
+  color: white;
+}
+
+body.dark .contact-section .container .contact-form .main .inputs input::placeholder {
+  color: white;
+}
+
+body.dark .contact-section .container .row .contact-item a:hover i {
+  color: white;
+}
+
+body.dark .contact-section .container .row .contact-item a:hover h3 {
+  color: #fb839e;
+}
+
+body.dark .portfolio-section .row.portfolio-items .portfolio-item .portfolio-item-inner p {
+  color: white;
+}
+
+body.dark .contact-section .container .contact-form .main .textarea textarea {
+  background-color: #2b2c2f;
+  color: white;
+}
+
+body.dark .contact-section .container .contact-form .main .textarea textarea::-webkit-input-placeholder {
+  color: white;
+}
+
+body.dark .contact-section .container .contact-form .main .textarea textarea:-ms-input-placeholder {
+  color: white;
+}
+
+body.dark .contact-section .container .contact-form .main .textarea textarea::-ms-input-placeholder {
+  color: white;
+}
+
+body.dark .contact-section .container .contact-form .main .textarea textarea::placeholder {
+  color: white;
+}
+
+body.dark .contact-section .container .contact-form button {
+  background-color: #2b2c2f;
+}
+
+body.dark .nav-menu {
+  background-color: #2b2c2f;
+}
+
+body.dark .header .intro-link .hamburger-btn span {
+  background-color: #ffffff;
+}
+
+body.dark .header .intro-link .hamburger-btn span::before, body.dark .header .intro-link .hamburger-btn span::after {
+  background-color: #ffffff;
+}
+
+body.dark .home-section .row .home-text h2 {
+  color: #ffffff;
+}
+
+body.dark .style-switcher .s-icon i {
+  color: #ffffff;
+}
+
+body.dark .section-title h2 {
+  color: #ffffff;
+}
+
+body.dark .about-section .row .about-info p span {
+  color: #ffffff;
+}
+
+body.dark .service-section .row .service-item .service-item-inner .icon i {
+  color: #ffffff;
+}
+
+.outer-shadow {
+  -webkit-box-shadow: 3px 3px 3px #d0d0d0, -3px -3px 3px #f8f8f8;
+          box-shadow: 3px 3px 3px #d0d0d0, -3px -3px 3px #f8f8f8;
+}
+
+.inner-shadow {
+  -webkit-box-shadow: inset 3px 3px 3px #d0d0d0, inset -3px -3px 3px #f8f8f8;
+          box-shadow: inset 3px 3px 3px #d0d0d0, inset -3px -3px 3px #f8f8f8;
+}
+
+.hover-in-shadow {
+  position: relative;
+  z-index: 1;
+}
+
+.hover-in-shadow:hover {
+  -webkit-box-shadow: 0 0 0 #d0d0d0, 0 0 0 #f8f8f8;
+          box-shadow: 0 0 0 #d0d0d0, 0 0 0 #f8f8f8;
+}
+
+.hover-in-shadow:hover::after {
+  -webkit-box-shadow: inset 3px 3px 3px #d0d0d0, inset -3px -3px 3px #f8f8f8;
+          box-shadow: inset 3px 3px 3px #d0d0d0, inset -3px -3px 3px #f8f8f8;
+}
+
+.hover-in-shadow::after {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  content: "";
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.btn-default {
+  padding: 10px 25px;
+  font-weight: 500;
+  color: #fb839e;
+  background-color: transparent;
+  border-radius: 30px;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.btn-default::after {
+  border-radius: 30px;
+}
+
+.section-title {
+  padding: 0 15px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 100%;
+          flex: 0 0 100%;
+  max-width: 100%;
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.section-title h2 {
+  display: inline-block;
+  font-size: 30px;
+  font-weight: 700;
+  color: #000000;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.section-title h2::before {
+  content: attr(data-heading);
+  display: block;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fb839e;
+}
+
+.container {
+  max-width: 1140px;
+  margin: auto;
+}
+
+.header {
+  padding: 20px 15px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  width: 100%;
+}
+
+.header .intro-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header .intro-link .logo {
+  width: 40px;
+  height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 2px solid #fb839e;
+  border-radius: 50%;
+}
+
+.header .intro-link .logo a {
+  font-size: 24px;
+  color: #fb839e;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.header .intro-link .hamburger-btn {
+  width: 40px;
+  height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  border-radius: 50%;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.header .intro-link .hamburger-btn:after {
+  border-radius: 50%;
+}
+
+.header .intro-link .hamburger-btn span {
+  display: block;
+  height: 2px;
+  width: 16px;
+  background-color: #000000;
+  position: relative;
+}
+
+.header .intro-link .hamburger-btn span::after, .header .intro-link .hamburger-btn span::before {
+  content: "";
+  left: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: #000000;
+}
+
+.header .intro-link .hamburger-btn span::before {
+  top: -6px;
+}
+
+.header .intro-link .hamburger-btn span::after {
+  top: 6px;
+}
+
+.nav-menu {
+  padding: 0 15px;
+  position: fixed;
+  left: 0;
+  top: -100%;
+  width: 100%;
+  height: 100%;
+  background-color: #eff0f4;
+  overflow-y: auto;
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.nav-menu.show-it {
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-menu .close-nav-menu {
+  width: 40px;
+  height: 40px;
+  display: block;
+  font-size: 35px;
+  line-height: 35px;
+  border-radius: 50%;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  cursor: pointer;
+  text-align: center;
+  color: #666666;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.nav-menu .close-nav-menu::after {
+  border-radius: 50%;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.nav-menu .nav-menu-inner {
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.nav-menu .nav-menu-inner ul {
+  padding: 15px;
+}
+
+.nav-menu .nav-menu-inner ul li {
+  display: block;
+  margin: 10px 0;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.nav-menu .nav-menu-inner ul li a {
+  display: inline-block;
+  font-size: 28px;
+  font-weight: 600;
+  color: #555555;
+  padding: 5px 30px;
+  text-transform: capitalize;
+  border-radius: 30px;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.nav-menu .nav-menu-inner ul li a::after {
+  border-radius: 30px;
+}
+
+.nav-menu .nav-menu-inner ul li a.active {
+  color: #fb839e;
+}
+
+.nav-menu .copyright-text {
+  position: absolute;
+  left: -60px;
+  top: 50%;
+  -webkit-transform: translateY(-50%) rotate(-90deg);
+      -ms-transform: translateY(-50%) rotate(-90deg);
+          transform: translateY(-50%) rotate(-90deg);
+}
+
+.style-switcher {
+  position: fixed;
+  right: 0;
+  top: 75px;
+  padding: 15px;
+  width: 200px;
+  z-index: 1010;
+  border-radius: 5px;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  overflow: unset;
+  -webkit-transform: translateX(100%);
+      -ms-transform: translateX(100%);
+          transform: translateX(100%);
+}
+
+.style-switcher.show-it {
+  -webkit-transform: translateX(0);
+      -ms-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.style-switcher h4 {
+  margin: 0 0 10px;
+  color: #555555;
+  font-weight: 600;
+  font-size: 16px;
+  text-transform: capitalize;
+}
+
+.style-switcher .colors {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.style-switcher .colors span {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.style-switcher .colors span.color-1 {
+  background-color: #fb839e;
+}
+
+.style-switcher .colors span.color-2 {
+  background-color: #2eb1ed;
+}
+
+.style-switcher .colors span.color-3 {
+  background-color: #ec9412;
+}
+
+.style-switcher .colors span.color-4 {
+  background-color: #1fc586;
+}
+
+.style-switcher .colors span.color-5 {
+  background-color: #cc3a3b;
+}
+
+.style-switcher .s-icon {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  right: 100%;
+  margin-right: 15px;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.style-switcher .s-icon i {
+  font-size: 20px;
+  color: #000000;
+}
+
+.style-switcher .s-icon::after {
+  border-radius: 50%;
+}
+
+.style-switcher .s-icon.style-toggler {
+  top: 0;
+}
+
+.style-switcher .s-icon.day-night {
+  top: 50px;
+}
+
+html.blue .portfolio-popup .pp-details .pp-details-inner .pp-project-details .row .info ul li span a {
+  color: #2eb1ed;
+}
+
+html.blue .btn-default {
+  color: #2eb1ed;
+}
+
+html.blue .section-title h2::before {
+  color: #2eb1ed;
+}
+
+html.blue .header .intro-link .logo {
+  border: 2px solid #2eb1ed;
+}
+
+html.blue .header .intro-link .logo a {
+  color: #2eb1ed;
+}
+
+html.blue .nav-menu .nav-menu-inner ul li a.active {
+  color: #2eb1ed;
+}
+
+html.blue .home-section .effect-wrapper .effect.third {
+  border: 25px solid #2eb1ed;
+}
+
+html.blue .about-section .row .tabs .tabs-content .tab .education .education-carousel .owl-nav button.owl-prev span,
+html.blue .about-section .row .tabs .tabs-content .tab .education .education-carousel .owl-nav button.owl-next span {
+  color: #2eb1ed;
+  border: 1px solid #2eb1ed;
+}
+
+html.blue .about-section .row .tabs .tabs-content .tab .education .info .inner h3 span {
+  color: #2eb1ed;
+}
+
+html.blue .about-section .row .tabs .tabs-content .tab .experiences .experience .inner h3 {
+  color: #2eb1ed;
+}
+
+html.blue .about-section .row .tabs .tabs-content .tab .experiences .case i {
+  color: #2eb1ed;
+}
+
+html.blue .portfolio-section .row .portfolio-filter .filter-item.active {
+  color: #2eb1ed;
+}
+
+html.blue .portfolio-popup .pp-main .pp-main-inner .pp-project-details-btn {
+  color: #2eb1ed;
+}
+
+html.blue .portfolio-popup .pp-main .pp-main-inner .pp-project-details-btn i {
+  color: #2eb1ed;
+}
+
+html.blue .portfolio-section .row.portfolio-items .portfolio-item .portfolio-item-inner .portfolio-item-img .view-project {
+  color: #2eb1ed;
+}
+
+html.blue .contact-section .container .row .contact-item a i {
+  color: #2eb1ed;
+}
+
+html.blue .contact-section .container .row .contact-item a:hover h3,
+html.blue .contact-section .container .row .contact-item a:hover p {
+  color: #2eb1ed;
+}
+
+html.blue .contact-section .container .contact-form button {
+  color: #2eb1ed;
+}
+
+html.gold .portfolio-popup .pp-details .pp-details-inner .pp-project-details .row .info ul li span a {
+  color: #ec9412;
+}
+
+html.gold .portfolio-popup .pp-main .pp-main-inner .pp-project-details-btn {
+  color: #ec9412;
+}
+
+html.gold .portfolio-popup .pp-main .pp-main-inner .pp-project-details-btn i {
+  color: #ec9412;
+}
+
+html.gold .portfolio-section .row.portfolio-items .portfolio-item .portfolio-item-inner .portfolio-item-img .view-project {
+  color: #ec9412;
+}
+
+html.gold .btn-default {
+  color: #ec9412;
+}
+
+html.gold .section-title h2::before {
+  color: #ec9412;
+}
+
+html.gold .header .intro-link .logo {
+  border: 2px solid #ec9412;
+}
+
+html.gold .header .intro-link .logo a {
+  color: #ec9412;
+}
+
+html.gold .nav-menu .nav-menu-inner ul li a.active {
+  color: #ec9412;
+}
+
+html.gold .home-section .effect-wrapper .effect.third {
+  border: 25px solid #ec9412;
+}
+
+html.gold .about-section .row .tabs .tabs-content .tab .education .education-carousel .owl-nav button.owl-prev span,
+html.gold .about-section .row .tabs .tabs-content .tab .education .education-carousel .owl-nav button.owl-next span {
+  color: #ec9412;
+  border: 1px solid #ec9412;
+}
+
+html.gold .about-section .row .tabs .tabs-content .tab .education .info .inner h3 span {
+  color: #ec9412;
+}
+
+html.gold .about-section .row .tabs .tabs-content .tab .experiences .experience .inner h3 {
+  color: #ec9412;
+}
+
+html.gold .about-section .row .tabs .tabs-content .tab .experiences .case i {
+  color: #ec9412;
+}
+
+html.gold .portfolio-section .row .portfolio-filter .filter-item.active {
+  color: #ec9412;
+}
+
+html.gold .contact-section .container .row .contact-item a i {
+  color: #ec9412;
+}
+
+html.gold .contact-section .container .row .contact-item a:hover h3,
+html.gold .contact-section .container .row .contact-item a:hover p {
+  color: #ec9412;
+}
+
+html.gold .contact-section .container .contact-form button {
+  color: #ec9412;
+}
+
+html.green .portfolio-popup .pp-details .pp-details-inner .pp-project-details .row .info ul li span a {
+  color: #1fc586;
+}
+
+html.green .portfolio-popup .pp-main .pp-main-inner .pp-project-details-btn {
+  color: #1fc586;
+}
+
+html.green .portfolio-popup .pp-main .pp-main-inner .pp-project-details-btn i {
+  color: #1fc586;
+}
+
+html.green .portfolio-section .row.portfolio-items .portfolio-item .portfolio-item-inner .portfolio-item-img .view-project {
+  color: #1fc586;
+}
+
+html.green .btn-default {
+  color: #1fc586;
+}
+
+html.green .section-title h2::before {
+  color: #1fc586;
+}
+
+html.green .header .intro-link .logo {
+  border: 2px solid #1fc586;
+}
+
+html.green .header .intro-link .logo a {
+  color: #1fc586;
+}
+
+html.green .nav-menu .nav-menu-inner ul li a.active {
+  color: #1fc586;
+}
+
+html.green .home-section .effect-wrapper .effect.third {
+  border: 25px solid #1fc586;
+}
+
+html.green .about-section .row .tabs .tabs-content .tab .education .education-carousel .owl-nav button.owl-prev span,
+html.green .about-section .row .tabs .tabs-content .tab .education .education-carousel .owl-nav button.owl-next span {
+  color: #1fc586;
+  border: 1px solid #1fc586;
+}
+
+html.green .about-section .row .tabs .tabs-content .tab .education .info .inner h3 span {
+  color: #1fc586;
+}
+
+html.green .about-section .row .tabs .tabs-content .tab .experiences .experience .inner h3 {
+  color: #1fc586;
+}
+
+html.green .about-section .row .tabs .tabs-content .tab .experiences .case i {
+  color: #1fc586;
+}
+
+html.green .portfolio-section .row .portfolio-filter .filter-item.active {
+  color: #1fc586;
+}
+
+html.green .contact-section .container .row .contact-item a i {
+  color: #1fc586;
+}
+
+html.green .contact-section .container .row .contact-item a:hover h3,
+html.green .contact-section .container .row .contact-item a:hover p {
+  color: #1fc586;
+}
+
+html.green .contact-section .container .contact-form button {
+  color: #1fc586;
+}
+
+html.red .portfolio-popup .pp-details .pp-details-inner .pp-project-details .row .info ul li span a {
+  color: #cc3a3b;
+}
+
+html.red .portfolio-popup .pp-main .pp-main-inner .pp-project-details-btn {
+  color: #cc3a3b;
+}
+
+html.red .portfolio-popup .pp-main .pp-main-inner .pp-project-details-btn i {
+  color: #cc3a3b;
+}
+
+html.red .portfolio-section .row.portfolio-items .portfolio-item .portfolio-item-inner .portfolio-item-img .view-project {
+  color: #cc3a3b;
+}
+
+html.red .btn-default {
+  color: #cc3a3b;
+}
+
+html.red .section-title h2::before {
+  color: #cc3a3b;
+}
+
+html.red .header .intro-link .logo {
+  border: 2px solid #cc3a3b;
+}
+
+html.red .header .intro-link .logo a {
+  color: #cc3a3b;
+}
+
+html.red .nav-menu .nav-menu-inner ul li a.active {
+  color: #cc3a3b;
+}
+
+html.red .home-section .effect-wrapper .effect.third {
+  border: 25px solid #cc3a3b;
+}
+
+html.red .about-section .row .tabs .tabs-content .tab .education .education-carousel .owl-nav button.owl-prev span,
+html.red .about-section .row .tabs .tabs-content .tab .education .education-carousel .owl-nav button.owl-next span {
+  color: #cc3a3b;
+  border: 1px solid #cc3a3b;
+}
+
+html.red .about-section .row .tabs .tabs-content .tab .education .info .inner h3 span {
+  color: #cc3a3b;
+}
+
+html.red .about-section .row .tabs .tabs-content .tab .experiences .experience .inner h3 {
+  color: #cc3a3b;
+}
+
+html.red .about-section .row .tabs .tabs-content .tab .experiences .case i {
+  color: #cc3a3b;
+}
+
+html.red .portfolio-section .row .portfolio-filter .filter-item.active {
+  color: #cc3a3b;
+}
+
+html.red .contact-section .container .row .contact-item a i {
+  color: #cc3a3b;
+}
+
+html.red .contact-section .container .row .contact-item a:hover h3,
+html.red .contact-section .container .row .contact-item a:hover p {
+  color: #cc3a3b;
+}
+
+html.red .contact-section .container .contact-form button {
+  color: #cc3a3b;
+}

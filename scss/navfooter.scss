@@ -1,0 +1,677 @@
+@import "variables";
+
+html {
+	*,
+	ul,
+	p {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		box-sizing: border-box;
+		scroll-behavior: smooth;
+		outline: none;
+		font-family: "Raleway";
+		outline: none;
+		font-size: 16px;
+		line-height: 150%;
+		color: $text-black-300;
+	}
+
+	a {
+		color: inherit;
+		text-decoration: none;
+	}
+
+	section {
+		overflow: hidden;
+	}
+
+	input::-webkit-outer-spin-button,
+	input::-webkit-inner-spin-button {
+		-webkit-appearance: none;
+		margin: 0;
+	}
+
+	input[type="number"] {
+		-moz-appearance: textfield;
+	}
+}
+body {
+	background-color: $bg-black-50;
+	transition: all 0.5s ease;
+	&.stop-scrolling {
+		overflow-y: hidden;
+	}
+}
+body.dark {
+	$bg-black-900: #ffffff;
+	$bg-black-100: #353535;
+	$bg-black-50: #2b2c2f;
+	$text-black-900: #ffffff;
+	$text-black-700: #ffffff;
+	$text-black-600: #bbbbbb;
+	background-color: $bg-black-50;
+	.style-switcher h4 {
+		color: white;
+	}
+	.nav-menu .close-nav-menu {
+		color: $text-black-900;
+	}
+	.nav-menu .nav-menu-inner ul li a {
+		color: $text-black-900;
+		&.active {
+			color: $pink;
+		}
+	}
+	.home-section .row .home-text h1 {
+		color: $text-black-600;
+	}
+	.about-section .row .about-info p {
+		color: $text-black-600;
+	}
+	.about-section .row .tabs .tabs-content .tab > h2 {
+		color: $text-black-600;
+	}
+	.service-section .row .service-item .service-item-inner {
+		h3, p {
+			color: $text-black-600;
+		}
+	}
+	.portfolio-section .row .portfolio-filter .filter-item {
+		color: $text-black-900;
+	}
+	.portfolio-popup {
+		background-color: $bg-black-50;
+	}
+	.portfolio-popup .pp-main .pp-main-inner .pp-close {
+		color: white;
+	}
+	.portfolio-popup .pp-main .pp-main-inner {
+		.pp-prev i, .pp-next i {
+			color: white;
+		}
+	} 
+	.portfolio-popup .pp-details .pp-details-inner .pp-title h2 {
+		color: white;
+	}
+	.portfolio-popup .pp-details .pp-details-inner .pp-project-details .row {
+		.description p, h3, .info ul li {
+			color: white;
+		}
+	}
+	.contact-section .container .row .contact-item a h3 {
+		color: $text-black-900;
+	}
+	.contact-section .container .contact-form .main .inputs input {
+		background-color: $bg-black-50;
+		color: white;
+		&::placeholder {
+			color: white;
+		}
+	}
+	.contact-section .container .row .contact-item a:hover {
+		i {
+			color: white;
+		}
+		h3 {
+			color: $pink;
+		}
+	}
+	.portfolio-section .row.portfolio-items .portfolio-item .portfolio-item-inner p {
+		color: white;
+	}
+	.contact-section .container .contact-form .main .textarea textarea {
+		background-color: $bg-black-50;
+		color: white;
+		&::placeholder {
+			color: white;
+		}
+	}
+	.contact-section .container .contact-form button {
+		background-color: $bg-black-50;
+	}
+	.nav-menu {
+		background-color: $bg-black-50;
+	}
+	.header .intro-link .hamburger-btn span {
+		background-color: $bg-black-900;
+		&::before,
+		&::after {
+			background-color: $bg-black-900;
+		}
+	}
+	.home-section .row .home-text h2 {
+		color: $bg-black-900;
+	}
+	.style-switcher .s-icon i {
+		color: $bg-black-900;
+	}
+	.section-title h2 {
+		color: $bg-black-900;
+	}
+	.about-section .row .about-info p span {
+		color: $bg-black-900;
+	}
+	.service-section .row .service-item .service-item-inner .icon i {
+		color: $bg-black-900;
+	}
+}
+.outer-shadow {
+	box-shadow: $outer-shadow;
+}
+.inner-shadow {
+	box-shadow: $inner-shadow;
+}
+.hover-in-shadow {
+	position: relative;
+	z-index: 1;
+	&:hover {
+		box-shadow: $outer-shadow-0;
+		&::after {
+			box-shadow: $inner-shadow;
+		}
+	}
+	&::after {
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		content: "";
+		transition: all 0.3s ease;
+	}
+}
+.btn-default {
+	padding: 10px 25px;
+	font-weight: 500;
+	color: $pink;
+	background-color: transparent;
+	border-radius: 30px;
+	transition: all 0.3s ease;
+	display: inline-block;
+	&::after {
+		border-radius: 30px;
+	}
+}
+.section-title {
+	padding: 0 15px;
+	flex: 0 0 100%;
+	max-width: 100%;
+	text-align: center;
+	margin-bottom: 60px;
+	h2 {
+		display: inline-block;
+		font-size: 30px;
+		font-weight: 700;
+		color: $text-black-900;
+		text-transform: uppercase;
+		margin: 0;
+		&::before {
+			content: attr(data-heading);
+			display: block;
+			font-size: 16px;
+			font-weight: 600;
+			color: $pink;
+		}
+	}
+}
+.container {
+	max-width: 1140px;
+	margin: auto;
+}
+.header {
+	padding: 20px 15px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 99;
+	width: 100%;
+	.intro-link {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		.logo {
+			width: 40px;
+			height: 40px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			border: 2px solid $pink;
+			border-radius: 50%;
+			a {
+				font-size: 24px;
+				color: $pink;
+				font-weight: 600;
+				text-transform: uppercase;
+			}
+		}
+		.hamburger-btn {
+			width: 40px;
+			height: 40px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			cursor: pointer;
+			border-radius: 50%;
+			transition: all 0.3s ease;
+			&:after {
+				border-radius: 50%;
+			}
+			span {
+				display: block;
+				height: 2px;
+				width: 16px;
+				background-color: $bg-black-900;
+				position: relative;
+				&::after,
+				&::before {
+					content: "";
+					left: 0;
+					width: 100%;
+					height: 100%;
+					position: absolute;
+					background-color: $bg-black-900;
+				}
+				&::before {
+					top: -6px;
+				}
+				&::after {
+					top: 6px;
+				}
+			}
+		}
+	}
+}
+.nav-menu {
+	padding: 0 15px;
+	position: fixed;
+	left: 0;
+	top: -100%;
+	width: 100%;
+	height: 100%;
+	background-color: $bg-black-50;
+	overflow-y: auto;
+	transition: all 0.5s ease;
+	&.show-it {
+		transition: all 0.5s ease;
+		top: 0;
+		z-index: 1000;
+	}
+	.close-nav-menu {
+		width: 40px;
+		height: 40px;
+		display: block;
+		font-size: 35px;
+		line-height: 35px;
+		border-radius: 50%;
+		position: absolute;
+		top: 15px;
+		right: 15px;
+		cursor: pointer;
+		text-align: center;
+		color: $text-black-600;
+		transition: all 0.3s ease;
+		&::after {
+			border-radius: 50%;
+			transition: all 0.3s ease;
+		}
+	}
+	.nav-menu-inner {
+		min-height: 100vh;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		ul {
+			padding: 15px;
+			li {
+				display: block;
+				margin: 10px 0;
+				text-align: center;
+				margin-bottom: 20px;
+				a {
+					display: inline-block;
+					font-size: 28px;
+					font-weight: 600;
+					color: $text-black-700;
+					padding: 5px 30px;
+					text-transform: capitalize;
+					border-radius: 30px;
+					transition: all 0.3s ease;
+					&::after {
+						border-radius: 30px;
+					}
+					&.active {
+						color: $pink;
+					}
+				}
+			}
+		}
+	}
+	.copyright-text {
+		position: absolute;
+		left: -60px;
+		top: 50%;
+		transform: translateY(-50%) rotate(-90deg);
+	}
+}
+.style-switcher {
+	position: fixed;
+	right: 0;
+	top: 75px;
+	padding: 15px;
+	width: 200px;
+	z-index: 1010;
+	border-radius: 5px;
+	transition: all 0.3s ease;
+	overflow: unset;
+	transform: translateX(100%);
+	&.show-it {
+		transform: translateX(0);
+	}
+	h4 {
+		margin: 0 0 10px;
+		color: $text-black-700;
+		font-weight: 600;
+		font-size: 16px;
+		text-transform: capitalize;
+	}
+	.colors {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		span {
+			display: inline-block;
+			width: 30px;
+			height: 30px;
+			border-radius: 50%;
+			cursor: pointer;
+			&.color-1 {
+				background-color: $pink;
+			}
+			&.color-2 {
+				background-color: $blue;
+			}
+			&.color-3 {
+				background-color: $gold;
+			}
+			&.color-4 {
+				background-color: $green;
+			}
+			&.color-5 {
+				background-color: $red;
+			}
+		}
+	}
+	.s-icon {
+		position: absolute;
+		width: 40px;
+		height: 40px;
+		right: 100%;
+		margin-right: 15px;
+		cursor: pointer;
+		transition: all 0.3s ease;
+		border-radius: 50%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		i {
+			font-size: 20px;
+			color: $text-black-900;
+		}
+		&::after {
+			border-radius: 50%;
+		}
+		&.style-toggler {
+			top: 0;
+		}
+		&.day-night {
+			top: 50px;
+		}
+	}
+}
+html {
+	&.blue {
+		.portfolio-popup .pp-details .pp-details-inner .pp-project-details .row .info ul li span a {
+			color: $blue;
+		}
+		.btn-default {
+			color: $blue;
+		}
+		.section-title h2::before {
+			color: $blue;
+		}
+		.header .intro-link .logo {
+			border: 2px solid $blue;
+			a {
+				color: $blue;
+			}
+		}
+		.nav-menu .nav-menu-inner ul li a.active {
+			color: $blue;
+		}
+		.home-section .effect-wrapper .effect.third {
+			border: 25px solid $blue;
+		}
+		.about-section .row .tabs .tabs-content .tab .education .education-carousel .owl-nav button.owl-prev span,
+		.about-section .row .tabs .tabs-content .tab .education .education-carousel .owl-nav button.owl-next span {
+			color: $blue;
+			border: 1px solid $blue;
+		}
+		.about-section .row .tabs .tabs-content .tab .education .info .inner h3 span {
+			color: $blue;
+		}
+		.about-section .row .tabs .tabs-content .tab .experiences .experience .inner h3 {
+			color: $blue;
+		}
+		.about-section .row .tabs .tabs-content .tab .experiences .case i {
+			color: $blue;
+		}
+		.portfolio-section .row .portfolio-filter .filter-item.active {
+			color: $blue;
+		}
+		.portfolio-popup .pp-main .pp-main-inner .pp-project-details-btn {
+			color: $blue;
+			i {
+				color: $blue;
+			}
+		}
+		.portfolio-section .row.portfolio-items .portfolio-item .portfolio-item-inner .portfolio-item-img .view-project {
+			color: $blue;
+		}
+		.contact-section .container .row .contact-item a i {
+			color: $blue;
+		}
+		.contact-section .container .row .contact-item a:hover {
+			h3,
+			p {
+				color: $blue;
+			}
+		}
+		.contact-section .container .contact-form button {
+			color: $blue;
+		}
+	}
+	&.gold {
+		.portfolio-popup .pp-details .pp-details-inner .pp-project-details .row .info ul li span a {
+			color: $gold;
+		}
+		.portfolio-popup .pp-main .pp-main-inner .pp-project-details-btn {
+			color: $gold;
+			i {
+				color: $gold;
+			}
+		}
+		.portfolio-section .row.portfolio-items .portfolio-item .portfolio-item-inner .portfolio-item-img .view-project {
+			color: $gold;
+		}
+		.btn-default {
+			color: $gold;
+		}
+		.section-title h2::before {
+			color: $gold;
+		}
+		.header .intro-link .logo {
+			border: 2px solid $gold;
+			a {
+				color: $gold;
+			}
+		}
+		.nav-menu .nav-menu-inner ul li a.active {
+			color: $gold;
+		}
+		.home-section .effect-wrapper .effect.third {
+			border: 25px solid $gold;
+		}
+		.about-section .row .tabs .tabs-content .tab .education .education-carousel .owl-nav button.owl-prev span,
+		.about-section .row .tabs .tabs-content .tab .education .education-carousel .owl-nav button.owl-next span {
+			color: $gold;
+			border: 1px solid $gold;
+		}
+		.about-section .row .tabs .tabs-content .tab .education .info .inner h3 span {
+			color: $gold;
+		}
+		.about-section .row .tabs .tabs-content .tab .experiences .experience .inner h3 {
+			color: $gold;
+		}
+		.about-section .row .tabs .tabs-content .tab .experiences .case i {
+			color: $gold;
+		}
+		.portfolio-section .row .portfolio-filter .filter-item.active {
+			color: $gold;
+		}
+		.contact-section .container .row .contact-item a i {
+			color: $gold;
+		}
+		.contact-section .container .row .contact-item a:hover {
+			h3,
+			p {
+				color: $gold;
+			}
+		}
+		.contact-section .container .contact-form button {
+			color: $gold;
+		}
+	}
+	&.green {
+		.portfolio-popup .pp-details .pp-details-inner .pp-project-details .row .info ul li span a {
+			color: $green;
+		}
+		.portfolio-popup .pp-main .pp-main-inner .pp-project-details-btn {
+			color: $green;
+			i {
+				color: $green;
+			}
+		}
+		.portfolio-section .row.portfolio-items .portfolio-item .portfolio-item-inner .portfolio-item-img .view-project {
+			color: $green;
+		}
+		.btn-default {
+			color: $green;
+		}
+		.section-title h2::before {
+			color: $green;
+		}
+		.header .intro-link .logo {
+			border: 2px solid $green;
+			a {
+				color: $green;
+			}
+		}
+		.nav-menu .nav-menu-inner ul li a.active {
+			color: $green;
+		}
+		.home-section .effect-wrapper .effect.third {
+			border: 25px solid $green;
+		}
+		.about-section .row .tabs .tabs-content .tab .education .education-carousel .owl-nav button.owl-prev span,
+		.about-section .row .tabs .tabs-content .tab .education .education-carousel .owl-nav button.owl-next span {
+			color: $green;
+			border: 1px solid $green;
+		}
+		.about-section .row .tabs .tabs-content .tab .education .info .inner h3 span {
+			color: $green;
+		}
+		.about-section .row .tabs .tabs-content .tab .experiences .experience .inner h3 {
+			color: $green;
+		}
+		.about-section .row .tabs .tabs-content .tab .experiences .case i {
+			color: $green;
+		}
+		.portfolio-section .row .portfolio-filter .filter-item.active {
+			color: $green;
+		}
+		.contact-section .container .row .contact-item a i {
+			color: $green;
+		}
+		.contact-section .container .row .contact-item a:hover {
+			h3,
+			p {
+				color: $green;
+			}
+		}
+		.contact-section .container .contact-form button {
+			color: $green;
+		}
+	}
+	&.red {
+		.portfolio-popup .pp-details .pp-details-inner .pp-project-details .row .info ul li span a {
+			color: $red;
+		}
+		.portfolio-popup .pp-main .pp-main-inner .pp-project-details-btn {
+			color: $red;
+			i {
+				color: $red;
+			}
+		}
+		.portfolio-section .row.portfolio-items .portfolio-item .portfolio-item-inner .portfolio-item-img .view-project {
+			color: $red;
+		}
+		.btn-default {
+			color: $red;
+		}
+		.section-title h2::before {
+			color: $red;
+		}
+		.header .intro-link .logo {
+			border: 2px solid $red;
+			a {
+				color: $red;
+			}
+		}
+		.nav-menu .nav-menu-inner ul li a.active {
+			color: $red;
+		}
+		.home-section .effect-wrapper .effect.third {
+			border: 25px solid $red;
+		}
+		.about-section .row .tabs .tabs-content .tab .education .education-carousel .owl-nav button.owl-prev span,
+		.about-section .row .tabs .tabs-content .tab .education .education-carousel .owl-nav button.owl-next span {
+			color: $red;
+			border: 1px solid $red;
+		}
+		.about-section .row .tabs .tabs-content .tab .education .info .inner h3 span {
+			color: $red;
+		}
+		.about-section .row .tabs .tabs-content .tab .experiences .experience .inner h3 {
+			color: $red;
+		}
+		.about-section .row .tabs .tabs-content .tab .experiences .case i {
+			color: $red;
+		}
+		.portfolio-section .row .portfolio-filter .filter-item.active {
+			color: $red;
+		}
+		.contact-section .container .row .contact-item a i {
+			color: $red;
+		}
+		.contact-section .container .row .contact-item a:hover {
+			h3,
+			p {
+				color: $red;
+			}
+		}
+		.contact-section .container .contact-form button {
+			color: $red;
+		}
+	}
+}
